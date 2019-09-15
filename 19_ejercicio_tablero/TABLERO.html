@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Tablero</title>
+
+    </head>
+    <body>
+        <script>
+
+            //declaro variables
+
+        let numeroCasillas; 
+        numeroCasillas= parseInt (prompt ("¿De qué tamaño quieres el tablero?")); //recojo lo que dice el usuario dentro de la variable 
+        let total = " "; //string vacío
+        let total2 = " "; 
+        let tabla;
+        
+       
+        for (casillasImpares= 0; casillasImpares < 1000; casillasImpares++){//código que quiero que se repita para filas impares
+               
+            if (casillasImpares === numeroCasillas){
+                break //dejar de repetir cuando el número sea el que el usuario ha escrito
+            }
+
+            else if (casillasImpares %2== 0) { //si el número es par dibuja una X 
+                total += "X" + " ";
+            }
+            else {
+                total += "O" + " " //si es impar una O
+            }
+    
+
+         }
+        
+         for (casillasPares= 0; casillasPares < 1000; casillasPares++){//código que quiero que se repita para filas pares
+                
+            if (casillasPares === numeroCasillas){
+                break 
+            }
+
+            else if (casillasPares %2== 0) { 
+                total2 += "O" + " ";
+            }
+            else {
+                total2 += "X" + " " 
+            }
+                
+        }
+
+
+        for (tabla = 0; tabla <= numeroCasillas; tabla++){ 
+            
+            if (tabla === numeroCasillas) {
+              break
+        }
+            else if (tabla%2 == 1){ 
+             console.log (total)
+        }
+            else {
+             console.log(total2)
+        }
+        }
+
+ 
+
+        
+      
+        </script>
+    </body>
+   
+</html>
